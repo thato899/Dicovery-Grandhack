@@ -1,4 +1,4 @@
-# 🛡️ SafeRoute AI
+#  SafeRoute AI
 
 > *AI-powered community safety navigation for South Africa*
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 📖 Overview
+##  Overview
 
 SafeRoute AI is a mobile navigation application that prioritises **safety over speed**. Unlike traditional GPS apps that only consider distance and traffic, SafeRoute AI uses historical crime data, real-time incident reports, lighting conditions, and crowd movement patterns to recommend the safest walking route from point A to point B.
 
@@ -16,7 +16,7 @@ SafeRoute AI is a mobile navigation application that prioritises **safety over s
 
 ---
 
-## 🎯 The Problem
+##  The Problem
 
 | Current Reality | Gap |
 |----------------|-----|
@@ -29,30 +29,30 @@ SafeRoute AI is a mobile navigation application that prioritises **safety over s
 
 ---
 
-## ✨ Core Features
+##  Core Features
 
-### 1. 🗺️ Safer Route Recommendation
+### 1.  Safer Route Recommendation
 - Machine learning model predicts risk scores per street block (0–1)
 - Features: time of day, day of week, historical crime density, lighting, recent incident reports
 - A* pathfinding with risk as edge weight → safest path, not shortest
 
-### 2. 💥 Collision Detection & Ambulance Alert
+### 2.  Collision Detection & Ambulance Alert
 - Phone accelerometer detects crash patterns
 - Automatically notifies nearest Discovery-affiliated ambulance
 - Zero-rated emergency data (no airtime required for SOS)
 - Fallback: if user unresponsive → auto-escalate + GPS + audio recording
 
-### 3. 🚁 Drone First Responder Integration
+### 3.  Drone First Responder Integration
 - For high-priority incidents (car crash, assault, fire)
 - Dispatch nearest drone to stream video to emergency services before they arrive
 - Real-time feedback to caller: *"Drone en route, ETA 2 mins"*
 
-### 4. 🏥 Discovery Health Integration
+### 4.  Discovery Health Integration
 - Ambulance routing prioritises Discovery medical aid members
 - Hospital ETA + bed availability shown during transit
 - Family notifications with live location sharing
 
-### 5. 📊 Community-Driven Risk Mapping
+### 5.  Community-Driven Risk Mapping
 - Anonymous opt-in location data
 - Users can report: *"This street felt unsafe at 10 PM"*
 - Reports decay over time (prevents permanent stigmatisation)
@@ -60,7 +60,7 @@ SafeRoute AI is a mobile navigation application that prioritises **safety over s
 
 ---
 
-## 🧠 AI Models Used
+##  AI Models Used
 
 | Model | Purpose | Tech Stack |
 |-------|---------|-------------|
@@ -73,6 +73,6 @@ All models run **partially on-device** for privacy and offline capability.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend (Mobile)
