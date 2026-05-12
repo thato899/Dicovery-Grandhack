@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # SafeRoute AI
 
 ### AI-Powered Community Safety Navigation for South Africa
@@ -17,26 +16,26 @@ cat > README.md << 'EOF'
 
 ## Table of Contents
 
-1. [Executive Summary](#executive-summary)
-2. [Problem Statement](#problem-statement)
-3. [Solution Overview](#solution-overview)
-4. [Team Members & Responsibilities](#team-members--responsibilities)
-5. [Technology Stack](#technology-stack)
-6. [Project Structure](#project-structure)
-7. [Branch Strategy & Git Workflow](#branch-strategy--git-workflow)
-8. [Setup Instructions by Role](#setup-instructions-by-role)
-9. [Core Features](#core-features)
-10. [System Architecture](#system-architecture)
-11. [UML Diagrams](#uml-diagrams)
-12. [API Documentation](#api-documentation)
-13. [Database Schema](#database-schema)
-14. [Machine Learning Pipeline](#machine-learning-pipeline)
-15. [Development Timeline](#development-timeline)
-16. [Testing Strategy](#testing-strategy)
-17. [Deployment Guide](#deployment-guide)
-18. [Risk Mitigation](#risk-mitigation)
-19. [Deliverables](#deliverables)
-20. [License & Contact](#license--contact)
+1. Executive Summary
+2. Problem Statement
+3. Solution Overview
+4. Team Members & Responsibilities
+5. Technology Stack
+6. Project Structure
+7. Branch Strategy & Git Workflow
+8. Setup Instructions by Role
+9. Core Features
+10. System Architecture
+11. UML Diagrams
+12. API Documentation
+13. Database Schema
+14. Machine Learning Pipeline
+15. Development Timeline
+16. Testing Strategy
+17. Deployment Guide
+18. Risk Mitigation
+19. Deliverables
+20. License & Contact
 
 ---
 
@@ -50,14 +49,28 @@ SafeRoute AI is a mobile navigation application that prioritizes safety over spe
 - Crowd movement patterns
 - Emergency response integration with Discovery Health
 
-The application uses machine learning to predict risk scores for street blocks and employs A* pathfinding with risk-weighted edges to recommend the safest route. It includes collision detection that automatically alerts emergency services and community-driven risk mapping that improves over time.
+The application uses machine learning to predict risk scores for street blocks and employs the A* pathfinding algorithm with risk-weighted edges to recommend the safest route. It includes collision detection that automatically alerts emergency services and community-driven risk mapping that improves over time.
 
-**Target Market:** Students, night workers, delivery drivers, and general pedestrians in Johannesburg, Cape Town, Durban, and Pretoria.
+### Target Users
 
-**Impact Metrics:**
-- 40% reduction in pedestrian incident response time
-- 60% increase in perceived safety for night commuters
-- Community involvement through Vitality points integration
+- University students
+- Night-shift workers
+- Delivery drivers
+- Tourists
+- General pedestrians
+
+### Geographic Focus
+
+- Johannesburg
+- Cape Town
+- Durban
+- Pretoria
+
+### Expected Impact
+
+- 40% reduction in emergency response time
+- 60% improvement in perceived safety for night commuters
+- Increased community participation through incentive-based reporting
 
 ---
 
@@ -65,97 +78,264 @@ The application uses machine learning to predict risk scores for street blocks a
 
 | Current Reality | Gap | Impact |
 |----------------|-----|--------|
-| Google Maps, Waze show fastest route only | No safety scoring for pedestrian routes | Users unknowingly walk through high-crime areas |
-| Crime occurs in predictable patterns (time, location) | Data exists but not integrated into navigation | Missed opportunity for preventive safety |
-| Communities know dangerous streets | No system to capture and share local knowledge | Collective intelligence wasted |
-| Emergency response averages 15-20 minutes in SA | No intelligent pre-escalation or prioritization | Delayed help during critical incidents |
-| 78% of South Africans feel unsafe walking after dark | No safety-first navigation solution | Limited mobility and quality of life |
-
-**Market Size:** 
-- 60 million South Africans
-- 15 million daily pedestrians in urban areas
-- 2.5 million students walking to campus
-- R500 billion addressable safety tech market in Africa by 2027
+| Navigation apps prioritize shortest or fastest routes | No pedestrian safety scoring | Users may walk through dangerous areas |
+| Crime follows time and location patterns | Crime data is not integrated into route planning | Preventive insights are unused |
+| Communities know dangerous areas | No platform to share this information | Local knowledge is lost |
+| Emergency response may be delayed | No automatic intelligent alerting | Delayed medical assistance |
+| Many South Africans avoid walking after dark | No safety-first navigation tool | Reduced mobility and quality of life |
 
 ---
 
 ## Solution Overview
 
-SafeRoute AI solves pedestrian safety through four integrated components:
+SafeRoute AI combines four major systems.
 
 ### 1. Safe Route Recommendation Engine
-- ML model predicts risk scores per 100m street block (0-1 scale)
-- Features: time of day, day of week, crime density, lighting, recent reports
-- A* algorithm with risk as primary weight (safety over speed)
-- Visual comparison between safest and shortest routes
 
-### 2. Collision Detection & Emergency Response
-- Phone accelerometer detects crash patterns (force, angle, duration)
-- Automatic Discovery Health ambulance notification
-- Zero-rated emergency data (no airtime required for SOS)
-- Unresponsive user auto-escalation with GPS + audio recording
+- Machine learning predicts a risk score for each street segment
+- Features include crime density, lighting, time, and recent reports
+- A* pathfinding calculates the safest route
+- Comparison between shortest and safest routes
+
+### 2. Collision Detection and Emergency Response
+
+- Accelerometer detects collisions and sudden impact
+- Automatic emergency alerts are triggered
+- GPS coordinates are sent to responders
+- Unresponsive users are automatically escalated
 
 ### 3. Community Risk Intelligence
-- Anonymous opt-in location data aggregation
-- User reports: "This street felt unsafe at 10 PM"
-- Time-decaying reports (prevents permanent stigmatization)
-- Discovery Vitality points for safety contributions
+
+- Users submit incident reports
+- Reports decay over time
+- Anonymous crowd data improves predictions
+- Incentive system encourages participation
 
 ### 4. Discovery Health Integration
-- Ambulance routing prioritizes medical aid members
-- Real-time hospital ETA + bed availability display
-- Family notifications with live location sharing
-- Medical history access for emergency responders
+
+- Ambulance dispatch and ETA
+- Family notifications
+- Hospital and bed availability
+- Medical profile access for responders
 
 ---
 
 ## Team Members & Responsibilities
 
-### Thato Maluleka - Project Lead & Mobile Developer
+### Thato Maluleka — Project Lead and Mobile Developer
+
 **GitHub Branch:** `Thato`  
-**Primary Folder:** `mobile-app/`
+**Primary Folder:** `mobile-app/SafeRouteAI/`
 
-| Responsibility | Technologies | Deliverables |
-|----------------|--------------|---------------|
-| React Native application architecture | React Native, Expo | Working mobile app |
-| Map integration and route visualization | React Native Maps, MapLibre | Interactive navigation |
-| Collision detection system | Expo Sensors, TensorFlow Lite | Emergency trigger system |
-| Emergency alert implementation | Twilio API, SMS gateway | SOS notification system |
-| Performance optimization | React Native Performance | < 2s load time |
-| Code review and merge management | GitHub, Git | Clean main branch |
+#### Responsibilities
 
-**Installation Requirements:**
-```bash
-# System prerequisites
-sudo apt update && sudo apt upgrade -y
+- React Native application architecture
+- GPS and map integration
+- Safe route visualization
+- Collision detection
+- Emergency SOS implementation
+- Mobile performance optimization
+- Code reviews and merge management
 
-# Install Node.js 20 LTS
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt install -y nodejs
+#### Deliverables
 
-# Verify installation
-node --version  # Must show v20.19.0 or higher
-npm --version   # Must show 10.2.0 or higher
+- Mobile application
+- Navigation screens
+- Emergency screen
+- Sensor integration
+- Production-ready Expo build
 
-# Install Expo CLI globally
-npm install -g expo-cli
+---
 
-# Clone repository
-git clone https://github.com/thato899/Dicovery-Grandhack.git
-cd Dicovery-Grandhack
-git checkout Thato
+### Treasure Ramatshila — Backend Developer
 
-# Install mobile dependencies
-cd mobile-app/SafeRouteAI
-npm install
-npm install react-native-maps expo-location expo-sensors
-npm install @react-native-async-storage/async-storage
-npm install a-star heap-js geolib
-npm install @tensorflow/tfjs-react-native
+**GitHub Branch:** `backend-api`  
+**Primary Folder:** `backend/`
 
-# Start development server
-npm start
+#### Responsibilities
 
-# Test on different platforms
-npm run android   # Requires Android Studio or device
-npm run web       # Runs in browser
+- Firebase project configuration
+- Firestore schema design
+- Express REST API development
+- Authentication system
+- Incident reporting endpoints
+- Emergency dispatch endpoints
+- Data backup and persistence
+
+#### Deliverables
+
+- Authentication API
+- Risk scoring API
+- Incident reporting API
+- Emergency API
+- Firestore rules and indexes
+
+---
+
+### Bongani Mahlangu — Machine Learning Engineer
+
+**GitHub Branch:** `ml-engine`  
+**Primary Folder:** `ml/`
+
+#### Responsibilities
+
+- Risk prediction model development
+- Crime data preprocessing
+- Feature engineering
+- A* pathfinding and risk weighting
+- ONNX export
+- Model evaluation and monitoring
+
+#### Deliverables
+
+- Trained XGBoost model
+- ONNX mobile model
+- Pathfinding algorithm
+- Evaluation notebooks
+
+---
+
+### Tharollo Sebe — UI/UX Designer and Frontend Developer
+
+**GitHub Branch:** `frontend-ui`  
+**Primary Folder:** `frontend-ui/`
+
+#### Responsibilities
+
+- Design system and branding
+- Component library
+- Screen layouts
+- Accessibility compliance
+- Loading and error states
+- Responsive design
+
+#### Deliverables
+
+- Figma prototype
+- Design tokens
+- Component library
+- High-fidelity screens
+
+---
+
+### Shared Integration and Testing
+
+**GitHub Branch:** `integration`
+
+#### Responsibilities
+
+- Continuous integration
+- Unit and end-to-end testing
+- API contract validation
+- Performance benchmarking
+- Deployment coordination
+- Documentation maintenance
+
+---
+
+## Technology Stack
+
+### Mobile Application
+
+| Technology | Version | Purpose |
+|----------|----------|----------|
+| React Native | 0.81.5 | Mobile development |
+| Expo | 49.0.23 | Development platform |
+| React Native Maps | 1.27.2 | Map rendering |
+| Expo Location | Latest | GPS services |
+| Expo Sensors | Latest | Accelerometer |
+| React Navigation | 6.x | Screen navigation |
+| TensorFlow Lite | Latest | On-device inference |
+
+### Backend
+
+| Technology | Purpose |
+|----------|----------|
+| Firebase | Backend services |
+| Firestore | NoSQL database |
+| Firebase Auth | Authentication |
+| Cloud Functions | Serverless API |
+| Express.js | REST API |
+| Twilio | SMS alerts |
+
+### Machine Learning
+
+| Technology | Purpose |
+|----------|----------|
+| XGBoost | Risk classification |
+| scikit-learn | Preprocessing |
+| Pandas | Data analysis |
+| NetworkX | Graph algorithms |
+| ONNX Runtime | Mobile inference |
+
+### DevOps and Quality
+
+| Technology | Purpose |
+|----------|----------|
+| Git | Version control |
+| GitHub Actions | CI/CD |
+| Jest | Unit testing |
+| Cypress | End-to-end testing |
+| ESLint | Code quality |
+| Prettier | Code formatting |
+
+---
+
+## Project Structure
+
+```text
+Dicovery-Grandhack/
+│
+├── mobile-app/
+│   └── SafeRouteAI/
+│       ├── app/
+│       │   ├── screens/
+│       │   ├── components/
+│       │   ├── services/
+│       │   ├── hooks/
+│       │   ├── utils/
+│       │   ├── types/
+│       │   └── styles/
+│       ├── config/
+│       ├── assets/
+│       ├── App.tsx
+│       ├── package.json
+│       └── tsconfig.json
+│
+├── backend/
+│   ├── src/
+│   │   ├── routes/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── middleware/
+│   │   ├── services/
+│   │   └── utils/
+│   ├── tests/
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── ml/
+│   ├── data/
+│   ├── notebooks/
+│   ├── models/
+│   ├── training/
+│   ├── src/
+│   └── requirements.txt
+│
+├── frontend-ui/
+│   ├── design/
+│   ├── components/
+│   ├── screens/
+│   └── figma/
+│
+├── docs/
+│   ├── api/
+│   ├── architecture/
+│   └── user-guide/
+│
+├── .github/
+│   └── workflows/
+│
+├── README.md
+├── CONTRIBUTING.md
+└── .gitignore
