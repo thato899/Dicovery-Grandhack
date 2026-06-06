@@ -147,7 +147,7 @@ SafeRoute AI combines four major systems.
 
 ---
 
-### Treasure Ramatshila — Backend Developer
+### Rorisang Mokoalase — Backend Developer
 
 **GitHub Branch:** `backend-api`  
 **Primary Folder:** `backend/`
@@ -172,7 +172,7 @@ SafeRoute AI combines four major systems.
 
 ---
 
-### Bongani Mahlangu — Machine Learning Engineer
+### Zinhle Sibisi — Machine Learning Engineer
 
 **GitHub Branch:** `ml-engine`  
 **Primary Folder:** `ml/`
@@ -195,7 +195,7 @@ SafeRoute AI combines four major systems.
 
 ---
 
-### Tharollo Sebe — UI/UX Designer and Frontend Developer
+### Pontsho Treasure Ramatshila — UI/UX Designer and Frontend Developer
 
 **GitHub Branch:** `frontend-ui`  
 **Primary Folder:** `frontend-ui/`
@@ -218,7 +218,7 @@ SafeRoute AI combines four major systems.
 
 ---
 
-### Shared Integration and Testing
+### Bongani Mahlangu — Integration and Testing Lead
 
 **GitHub Branch:** `integration`
 
