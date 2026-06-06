@@ -122,7 +122,7 @@ SafeRoute AI combines four major systems.
 
 ## Team Members & Responsibilities
 
-### Thato Maluleka — Project Lead and Mobile Developer
+### Zinhle Sibisi — Project Lead and Mobile Developer
 
 **GitHub Branch:** `Thato`  
 **Primary Folder:** `mobile-app/SafeRouteAI/`
@@ -172,7 +172,7 @@ SafeRoute AI combines four major systems.
 
 ---
 
-### Zinhle Sibisi — Machine Learning Engineer
+### Thato Maluleka — Machine Learning Engineer
 
 **GitHub Branch:** `ml-engine`  
 **Primary Folder:** `ml/`
