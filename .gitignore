@@ -22,3 +22,6 @@ ml/venv/
 *.so
 *.dll
 *.dylib
+__pycache__/
+*.pyc
+*.pyo
