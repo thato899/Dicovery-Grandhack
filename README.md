@@ -6,7 +6,8 @@
 [![React Native](https://img.shields.io/badge/React%20Native-0.81.5-61DAFB)](https://reactnative.dev/)
 [![Expo](https://img.shields.io/badge/Expo-49.0.23-000020)](https://expo.dev/)
 [![Firebase](https://img.shields.io/badge/Firebase-latest-FFCA28)](https://firebase.google.com/)
-[![XGBoost](https://img.shields.io/badge/XGBoost-2.x-orange)](https://xgboost.ai/)
+[![XGBoost](https://img.shields.io/badge/XGBoost-3.2.0-orange)](https://xgboost.ai/)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB)](https://python.org/)
 
 **Event:** Discovery Gradhack 2026  
 **Theme:** AI for Safer Communities (Theme 3)  
@@ -22,11 +23,11 @@
 4. Team Members & Responsibilities
 5. Technology Stack
 6. Project Structure
-7. Branch Strategy & Git Workflow
-8. Setup Instructions by Role
-9. Core Features
-10. System Architecture
-11. UML Diagrams
+7. ML System Highlights (NEW)
+8. Branch Strategy & Git Workflow
+9. Setup Instructions by Role
+10. Core Features
+11. System Architecture
 12. API Documentation
 13. Database Schema
 14. Machine Learning Pipeline
@@ -124,7 +125,7 @@ SafeRoute AI combines four major systems.
 
 ### Zinhle Sibisi — Project Lead and Mobile Developer
 
-**GitHub Branch:** `Thato`  
+**GitHub Branch:** `main`  
 **Primary Folder:** `mobile-app/SafeRouteAI/`
 
 #### Responsibilities
@@ -174,24 +175,25 @@ SafeRoute AI combines four major systems.
 
 ### Thato Maluleka — Machine Learning Engineer
 
-**GitHub Branch:** `ml-engine`  
+**GitHub Branch:** `main` / `Thato`  
 **Primary Folder:** `ml/`
 
-#### Responsibilities
+#### Responsibilities (✅ ALL COMPLETED)
 
-- Risk prediction model development
-- Crime data preprocessing
-- Feature engineering
-- A* pathfinding and risk weighting
-- ONNX export
+- Risk prediction model development using XGBoost
+- Crime data preprocessing and validation
+- Feature engineering (14 features from raw data)
+- A* pathfinding algorithm with risk weighting
+- ONNX export for mobile deployment
 - Model evaluation and monitoring
 
-#### Deliverables
+#### Deliverables (✅ ALL COMPLETED)
 
-- Trained XGBoost model
-- ONNX mobile model
-- Pathfinding algorithm
-- Evaluation notebooks
+- ✅ Trained XGBoost risk model (risk_model.pkl)
+- ✅ ONNX export script for mobile deployment
+- ✅ Complete feature engineering pipeline
+- ✅ RiskPredictor wrapper class for easy integration
+- ✅ 14-page comprehensive documentation (docs/ML/)
 
 ---
 
@@ -258,15 +260,17 @@ SafeRoute AI combines four major systems.
 | Express.js | REST API |
 | Twilio | SMS alerts |
 
-### Machine Learning
+### Machine Learning (✅ COMPLETED)
 
-| Technology | Purpose |
-|----------|----------|
-| XGBoost | Risk classification |
-| scikit-learn | Preprocessing |
-| Pandas | Data analysis |
-| NetworkX | Graph algorithms |
-| ONNX Runtime | Mobile inference |
+| Technology | Version | Purpose |
+|----------|----------|----------|
+| XGBoost | 3.2.0 | Risk classification ✅ |
+| scikit-learn | 1.4.0 | Preprocessing ✅ |
+| Pandas | 3.0.3 | Data analysis ✅ |
+| NumPy | 2.4.6 | Numerical operations ✅ |
+| NetworkX | 3.6.1 | Graph algorithms ✅ |
+| ONNX Runtime | 1.26.0 | Mobile inference ✅ |
+| BallTree | - | Geospatial queries ✅ |
 
 ### DevOps and Quality
 
@@ -287,55 +291,45 @@ SafeRoute AI combines four major systems.
 Dicovery-Grandhack/
 │
 ├── mobile-app/
-│   └── SafeRouteAI/
-│       ├── app/
-│       │   ├── screens/
-│       │   ├── components/
-│       │   ├── services/
-│       │   ├── hooks/
-│       │   ├── utils/
-│       │   ├── types/
-│       │   └── styles/
-│       ├── config/
-│       ├── assets/
-│       ├── App.tsx
-│       ├── package.json
-│       └── tsconfig.json
+│   └── SafeRouteAI/          # React Native mobile app
 │
-├── backend/
+├── backend/                   # Express/Firebase backend
+│
+├── ml/                        # ✅ MACHINE LEARNING (COMPLETED)
 │   ├── src/
-│   │   ├── routes/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── middleware/
-│   │   ├── services/
-│   │   └── utils/
-│   ├── tests/
-│   ├── package.json
-│   └── tsconfig.json
+│   │   ├── data/             # Pydantic data schemas
+│   │   ├── features/         # Feature engineering (14 features)
+│   │   ├── models/           # XGBoost risk model
+│   │   ├── pathfinding/      # A* algorithm (ready)
+│   │   └── api/              # API contracts
+│   ├── scripts/              # Training, test, export scripts
+│   ├── data/                 # Raw and processed data
+│   ├── models/               # Trained models (.pkl, .onnx)
+│   ├── notebooks/            # Jupyter notebooks
+│   └── requirements.txt      # Python dependencies
 │
-├── ml/
-│   ├── data/
-│   ├── notebooks/
-│   ├── models/
-│   ├── training/
-│   ├── src/
-│   └── requirements.txt
-│
-├── frontend-ui/
-│   ├── design/
-│   ├── components/
-│   ├── screens/
-│   └── figma/
+├── frontend-ui/              # Web UI components
 │
 ├── docs/
+│   ├── ML/                   # ✅ COMPLETE ML DOCUMENTATION
+│   │   ├── Home.md
+│   │   ├── ML-Architecture-Overview.md
+│   │   ├── Setup-Installation.md
+│   │   ├── Data-Models-Schemas.md
+│   │   ├── Feature-Engineering.md
+│   │   ├── Model-Training.md
+│   │   ├── Model-Evaluation.md
+│   │   ├── Pathfinding-Engine.md
+│   │   ├── ONNX-Export.md
+│   │   ├── API-Contracts.md
+│   │   ├── Testing-Guide.md
+│   │   ├── MLOps-Strategy.md
+│   │   └── Troubleshooting.md
 │   ├── api/
-│   ├── architecture/
-│   └── user-guide/
+│   └── architecture/
 │
 ├── .github/
 │   └── workflows/
 │
 ├── README.md
-├── CONTRIBUTING.md
 └── .gitignore

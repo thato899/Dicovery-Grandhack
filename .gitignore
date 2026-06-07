@@ -1,27 +1,40 @@
-
-# Virtual environments
-venv/
-*/venv/
-ml/venv/
-.env/
-
-# Python cache
+# Python
 __pycache__/
 *.pyc
 *.pyo
+*.so
+*.dll
+*.dylib
+
+# Virtual environments
+venv/
+env/
+*/venv/
+
+# Data files
+*.csv
+*.parquet
+!data/samples/*.csv
+
+# Models
+*.pkl
+*.onnx
+models/production/
+models/registry/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
-ml/venv/
-*.so
-*.dll
-*.dylib
-__pycache__/
-*.pyc
-*.pyo
+
+# Logs
+logs/
+*.log
+
+# MLflow
+mlruns/
+*.db
